@@ -4,15 +4,16 @@ namespace tutorial10.Models;
 
 public class Medicament
 {
-   [Required]
+    [Required]
+    public int IdMedicament { get; set; }
+    
+    [Required]
    [MaxLength (100)]
-    public String Name { get; set; } 
+    public String Name { get; set; } //parametr dla realizmu bo w rzeczywistości nigdzie nie wstawiamy go do bazy danych
     
     [Required]
     [MaxLength (100)]
-    public String Description { get; set; }
+    public String Details { get; set; }
     
-    [Required]
-    [MaxLength (100)]
-    public String Type { get; set; }
+    public int Dose { get; set; }
 }

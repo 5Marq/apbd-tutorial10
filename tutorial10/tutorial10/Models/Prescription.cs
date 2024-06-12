@@ -16,8 +16,8 @@ public class Prescription
     [Required] 
     public DateTime DueDate { get; set; }
     
-    [Required]
-    public int IdPatient { get; set; }
+    //[Required]
+    //public int IdPatient { get; set; } <--- nie potrzebujemy tego pola bo id pacjenta ściągniemy bezpośrednio z klasy Patient
     
     [Required]
     public int IdDoctor { get; set; }
