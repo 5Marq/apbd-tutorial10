@@ -4,10 +4,12 @@ using tutorial10.Services;
 
 namespace tutorial10.Controllers;
 
+[Route("api/prescriptions")]
+[ApiController]
 public class PrescriptionController : ControllerBase
 {
-  private IPrescriptionService _prescriptionService;
-
+  private readonly IPrescriptionService _prescriptionService;
+  
   public PrescriptionController(IPrescriptionService prescriptionService)
   {
     _prescriptionService = prescriptionService;
