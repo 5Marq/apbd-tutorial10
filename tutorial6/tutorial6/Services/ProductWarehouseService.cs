@@ -7,6 +7,11 @@ public class ProductWarehouseService : IProductWarehouseService
 {
     private readonly IProductWarehouseRepository _productWarehouseRepository;
 
+    public ProductWarehouseService(IProductWarehouseRepository productWarehouseRepository)
+    {
+        _productWarehouseRepository = productWarehouseRepository;
+    }
+
     public int CreateProductWarehouse(ProductWarehouse _productWarehouse)
     {
         return _productWarehouseRepository.CreateProductWarehouse(_productWarehouse);
